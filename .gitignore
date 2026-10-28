@@ -1,0 +1,23 @@
+.tooling/
+build/
+dist/*.apk
+dist/*.sha256
+dist/*.idsig
+*.keystore
+local.properties
+tests/fixtures/*.apk
+dist/
+__pycache__/
+*.py[cod]
+# Local diagnostic records and old screenshots are not source deliverables.
+docs/*
+!docs/BUILD.md
+!docs/BAIDU-SDK-dependencies.json
+!docs/ANDROID16-image.json
+!docs/tooling-hashes.txt
+!docs/holiday-cn-LICENSE.txt
+!docs/VERIFICATION-1.1.1.md
+!docs/ui-1.1.1-home-hidden.png
+!docs/ui-1.1.1-settings-hidden.png
+!docs/ui-1.1.1-settings-unlocked.png
+!docs/ui-1.1.1-reopened-hidden.png
