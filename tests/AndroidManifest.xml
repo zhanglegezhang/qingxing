@@ -1,0 +1,16 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="cn.qingxing.reminder.tests">
+    <uses-sdk android:minSdkVersion="28" android:targetSdkVersion="35"/>
+    <instrumentation android:name="cn.qingxing.reminder.FlowTests" android:targetPackage="cn.qingxing.reminder" android:label="Qingxing isolated emulator tests" />
+    <instrumentation android:name="cn.qingxing.reminder.ReminderTests" android:targetPackage="cn.qingxing.reminder" android:label="Bounded attendance alert tests" />
+    <instrumentation android:name="cn.qingxing.reminder.HolidayTests" android:targetPackage="cn.qingxing.reminder" android:label="Holiday sync tests" />
+    <instrumentation android:name="cn.qingxing.reminder.UpgradeProbe" android:targetPackage="cn.qingxing.reminder" android:label="Upgrade retention tests" />
+    <instrumentation android:name="cn.qingxing.reminder.CompactUpgradeProbe" android:targetPackage="cn.qingxing.reminder" android:label="Compact upgrade retention tests" />
+    <instrumentation android:name="cn.qingxing.reminder.LayoutUpgradeProbe" android:targetPackage="cn.qingxing.reminder" android:label="Layout upgrade retention tests" />
+    <instrumentation android:name="cn.qingxing.reminder.SmokeTests" android:targetPackage="cn.qingxing.reminder" android:label="Final smoke test" />
+    <instrumentation android:name="cn.qingxing.reminder.MinimalSmokeTests" android:targetPackage="cn.qingxing.reminder" android:label="Minimal release smoke" />
+    <instrumentation android:name="cn.qingxing.reminder.HomeSyncTests" android:targetPackage="cn.qingxing.reminder" android:label="Notification home synchronization and debug" />
+    <application android:label="Qingxing tests"/>
+    <instrumentation android:name="cn.qingxing.reminder.LocationTests" android:targetPackage="cn.qingxing.reminder" android:label="Location health tests" />
+    <instrumentation android:name="cn.qingxing.reminder.HiddenLocationTests" android:targetPackage="cn.qingxing.reminder" android:label="Hidden location session access tests" />
+    <instrumentation android:name="cn.qingxing.reminder.BaiduTests" android:targetPackage="cn.qingxing.reminder" android:label="Baidu SDK isolated integration tests" />
+</manifest>

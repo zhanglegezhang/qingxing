@@ -1,0 +1,12 @@
+{
+  "api": 36,
+  "android": "16",
+  "tag": "google_apis",
+  "revision": 7,
+  "url": "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-36_r07.zip",
+  "sha1": "c6bf44bdcd885bb902b4ba752d111a073ad7a817",
+  "avds": [
+    "QingxingAndroid16",
+    "QingxingSmoke16"
+  ]
+}

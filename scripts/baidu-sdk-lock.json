@@ -1,0 +1,32 @@
+[
+  {
+    "artifact": "BaiduMapSDK_Map",
+    "version": "8.2.0",
+    "url": "https://repo.maven.apache.org/maven2/com/baidu/lbsyun/BaiduMapSDK_Map/8.2.0/BaiduMapSDK_Map-8.2.0.aar",
+    "sha256": "bbdd358d87fa9dd080bd3848546659591d33a380a9195edb05f87c5c8988b690"
+  },
+  {
+    "artifact": "base",
+    "version": "8.2.0",
+    "url": "https://repo.maven.apache.org/maven2/com/baidu/lbsyun/base/8.2.0/base-8.2.0.aar",
+    "sha256": "f5331910f8e8909819dd250fbb3f9339293126344c3f2102c29e0e296e6891f7"
+  },
+  {
+    "artifact": "common",
+    "version": "1.0.43",
+    "url": "https://repo.maven.apache.org/maven2/com/baidu/lbsyun/common/1.0.43/common-1.0.43.aar",
+    "sha256": "8a44709a0854a5310ec3d88167b5aa72bf568a32e8f3264825c8566aa2bc4e2e"
+  },
+  {
+    "artifact": "BaiduMapSDK_Location",
+    "version": "9.6.9",
+    "url": "https://repo.maven.apache.org/maven2/com/baidu/lbsyun/BaiduMapSDK_Location/9.6.9/BaiduMapSDK_Location-9.6.9.aar",
+    "sha256": "04cadcb4ce9bcc4f495257727244a46a1fd5269a40c1bbf91578ff044a6aab5e"
+  },
+  {
+    "artifact": "protobuf",
+    "version": "1.0.7",
+    "url": "https://repo.maven.apache.org/maven2/com/baidu/lbsyun/protobuf/1.0.7/protobuf-1.0.7.aar",
+    "sha256": "b4744173ddf8a58a8dab3a787f865c6f8c3f2a8ca742b8fc485638042679b272"
+  }
+]

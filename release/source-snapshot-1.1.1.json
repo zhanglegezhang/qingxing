@@ -1,0 +1,554 @@
+{
+  "versionName": "1.1.1",
+  "versionCode": 23,
+  "apk": {
+    "file": "Qingxing-1.1.1.apk",
+    "sha256": "201bf1f9836dd1e9de98712d4eb8840c5507cc9978ab5be147c583c282440c29",
+    "bytes": 29870148,
+    "repacked": false
+  },
+  "originalBuildInputFingerprint": "09b4aae1ef18abc622f4279ace12b15b472a20a8549709e97913e16dc0aa089a",
+  "scope": "Public source snapshot of the original release; private credentials and local binaries are excluded.",
+  "exactOriginalPublicInputs": 67,
+  "credentialAdapters": [
+    "scripts/build-core.ps1",
+    "scripts/test-android-core.ps1"
+  ],
+  "addedCredentialSupport": [
+    "scripts/signing.ps1",
+    "tests/test_signing.py"
+  ],
+  "excludedOriginalInputs": [
+    {
+      "path": ".tooling/baidu/dependencies.json",
+      "reason": "Private configuration or local historical test APK; not distributed as source"
+    },
+    {
+      "path": ".tooling/baidu-ak.txt",
+      "reason": "Private configuration or local historical test APK; not distributed as source"
+    },
+    {
+      "path": "tests/fixtures/Qingxing-0.1.0.apk",
+      "reason": "Private configuration or local historical test APK; not distributed as source"
+    },
+    {
+      "path": "tests/fixtures/Qingxing-0.2.0.apk",
+      "reason": "Private configuration or local historical test APK; not distributed as source"
+    },
+    {
+      "path": "tests/fixtures/Qingxing-0.2.1.apk",
+      "reason": "Private configuration or local historical test APK; not distributed as source"
+    },
+    {
+      "path": "tests/fixtures/Qingxing-0.3.0.apk",
+      "reason": "Private configuration or local historical test APK; not distributed as source"
+    },
+    {
+      "path": "tests/fixtures/Qingxing-0.4.0.apk",
+      "reason": "Private configuration or local historical test APK; not distributed as source"
+    },
+    {
+      "path": "tests/fixtures/Qingxing-0.5.0.apk",
+      "reason": "Private configuration or local historical test APK; not distributed as source"
+    },
+    {
+      "path": "tests/fixtures/Qingxing-0.5.2.apk",
+      "reason": "Private configuration or local historical test APK; not distributed as source"
+    },
+    {
+      "path": "tests/fixtures/Qingxing-0.5.3.apk",
+      "reason": "Private configuration or local historical test APK; not distributed as source"
+    }
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "publicSha256": "cfcccd0691237cfd8e7aba9f823404a2542b02fc23f0d67f0fb3e0425838150d",
+      "status": "supplementary"
+    },
+    {
+      "path": "AGENTS.md",
+      "publicSha256": "121ad9d7701cddf9365282c1be8f5b91a45069a82e5a27eca9038ad783aed7f7",
+      "status": "exact-original",
+      "originalSha256": "121ad9d7701cddf9365282c1be8f5b91a45069a82e5a27eca9038ad783aed7f7"
+    },
+    {
+      "path": "app/src/main/AndroidManifest.xml",
+      "publicSha256": "70d9fc46899d1d65ee24d9a65a7bbfe497cbbbe97ec2ac5a9cfa07c9ce58aa82",
+      "status": "exact-original",
+      "originalSha256": "70d9fc46899d1d65ee24d9a65a7bbfe497cbbbe97ec2ac5a9cfa07c9ce58aa82"
+    },
+    {
+      "path": "app/src/main/java/cn/qingxing/reminder/AlarmReceiver.java",
+      "publicSha256": "f08d713f74306449586907f0d626e71e14f62428378aade076ece41b5e817878",
+      "status": "exact-original",
+      "originalSha256": "f08d713f74306449586907f0d626e71e14f62428378aade076ece41b5e817878"
+    },
+    {
+      "path": "app/src/main/java/cn/qingxing/reminder/Alerts.java",
+      "publicSha256": "482ad5152aef9a02543d6279af795df45e7d28d61f47cbd494c302de782bee9e",
+      "status": "exact-original",
+      "originalSha256": "482ad5152aef9a02543d6279af795df45e7d28d61f47cbd494c302de782bee9e"
+    },
+    {
+      "path": "app/src/main/java/cn/qingxing/reminder/AttendanceData.java",
+      "publicSha256": "72ed3fcb817b06ca5096f9363de276f7f948a4581133f364f240e0e57d12f220",
+      "status": "exact-original",
+      "originalSha256": "72ed3fcb817b06ca5096f9363de276f7f948a4581133f364f240e0e57d12f220"
+    },
+    {
+      "path": "app/src/main/java/cn/qingxing/reminder/Authorizations.java",
+      "publicSha256": "ca054aeea673735fc3d284662b681704b18d585e3b5df862020dfca7d75039c6",
+      "status": "exact-original",
+      "originalSha256": "ca054aeea673735fc3d284662b681704b18d585e3b5df862020dfca7d75039c6"
+    },
+    {
+      "path": "app/src/main/java/cn/qingxing/reminder/Coordinates.java",
+      "publicSha256": "ad33ae257bab2eba6dc8cf3c3fd7ff3df9edd6e9e6267dea0fbf778c71d73581",
+      "status": "exact-original",
+      "originalSha256": "ad33ae257bab2eba6dc8cf3c3fd7ff3df9edd6e9e6267dea0fbf778c71d73581"
+    },
+    {
+      "path": "app/src/main/java/cn/qingxing/reminder/FriendlyLog.java",
+      "publicSha256": "db3f96f52ac389e8d5766c7e195bd100b7d6aa04b0d93bd815b8599fd531933f",
+      "status": "exact-original",
+      "originalSha256": "db3f96f52ac389e8d5766c7e195bd100b7d6aa04b0d93bd815b8599fd531933f"
+    },
+    {
+      "path": "app/src/main/java/cn/qingxing/reminder/HolidayCalendar.java",
+      "publicSha256": "c8b866d5fb221255ddaee2a5f87224f9a9dc0ffe39339ab5beb0792c57c07c00",
+      "status": "exact-original",
+      "originalSha256": "c8b866d5fb221255ddaee2a5f87224f9a9dc0ffe39339ab5beb0792c57c07c00"
+    },
+    {
+      "path": "app/src/main/java/cn/qingxing/reminder/HolidayParser.java",
+      "publicSha256": "be97634d4355db1603ef2294fc27992a0717a3567326112b3306b8b37ec575e3",
+      "status": "exact-original",
+      "originalSha256": "be97634d4355db1603ef2294fc27992a0717a3567326112b3306b8b37ec575e3"
+    },
+    {
+      "path": "app/src/main/java/cn/qingxing/reminder/HolidaySync.java",
+      "publicSha256": "e501a81efbeb8820729bde115efc094693365143e64c5f8a8dbbdc8e8995ef87",
+      "status": "exact-original",
+      "originalSha256": "e501a81efbeb8820729bde115efc094693365143e64c5f8a8dbbdc8e8995ef87"
+    },
+    {
+      "path": "app/src/main/java/cn/qingxing/reminder/HolidaySyncJob.java",
+      "publicSha256": "0aefcaf69cc5edf6df4a6462420c4657de0b9a4e6d79c9f389d57414dc03045a",
+      "status": "exact-original",
+      "originalSha256": "0aefcaf69cc5edf6df4a6462420c4657de0b9a4e6d79c9f389d57414dc03045a"
+    },
+    {
+      "path": "app/src/main/java/cn/qingxing/reminder/LocationPage.java",
+      "publicSha256": "0989517778e3588b8932fefd85cea58f2ad506f9af3c9ed394ead2e19e211c49",
+      "status": "exact-original",
+      "originalSha256": "0989517778e3588b8932fefd85cea58f2ad506f9af3c9ed394ead2e19e211c49"
+    },
+    {
+      "path": "app/src/main/java/cn/qingxing/reminder/MainActivity.java",
+      "publicSha256": "90f468e9002b41cd6d4cfb8ceba7d6edd1c8b01d25a73142897ba4ce77353945",
+      "status": "exact-original",
+      "originalSha256": "90f468e9002b41cd6d4cfb8ceba7d6edd1c8b01d25a73142897ba4ce77353945"
+    },
+    {
+      "path": "app/src/main/java/cn/qingxing/reminder/MockLocationService.java",
+      "publicSha256": "01981b4ab3df3a79b0ef76cc8082392529054d026a6a85df797fcf7093ad32ba",
+      "status": "exact-original",
+      "originalSha256": "01981b4ab3df3a79b0ef76cc8082392529054d026a6a85df797fcf7093ad32ba"
+    },
+    {
+      "path": "app/src/main/java/cn/qingxing/reminder/MonitorService.java",
+      "publicSha256": "c1cf31000851d242b196095e8ccfa2ed74de2ab8bed3827a5f3a0adf20137a77",
+      "status": "exact-original",
+      "originalSha256": "c1cf31000851d242b196095e8ccfa2ed74de2ab8bed3827a5f3a0adf20137a77"
+    },
+    {
+      "path": "app/src/main/java/cn/qingxing/reminder/Planner.java",
+      "publicSha256": "26be4289e36c45fd34c3694b8626b2802af33fa913dba19c9a556f61e86a5d7d",
+      "status": "exact-original",
+      "originalSha256": "26be4289e36c45fd34c3694b8626b2802af33fa913dba19c9a556f61e86a5d7d"
+    },
+    {
+      "path": "app/src/main/java/cn/qingxing/reminder/Rules.java",
+      "publicSha256": "7416e7be3a21b16ee081a947349ead7cb548a4b2bd0d2805d834eb197f2cebfd",
+      "status": "exact-original",
+      "originalSha256": "7416e7be3a21b16ee081a947349ead7cb548a4b2bd0d2805d834eb197f2cebfd"
+    },
+    {
+      "path": "app/src/main/java/cn/qingxing/reminder/Screens.java",
+      "publicSha256": "7f91f9158847a66dbb3fa215ff59c28b768df4977ca7fdaaa06b50940893dc97",
+      "status": "exact-original",
+      "originalSha256": "7f91f9158847a66dbb3fa215ff59c28b768df4977ca7fdaaa06b50940893dc97"
+    },
+    {
+      "path": "app/src/main/java/cn/qingxing/reminder/Store.java",
+      "publicSha256": "7b247bec236d833d5c986b02acded48e7abbc3c440714c03d3ba22d0e1e62785",
+      "status": "exact-original",
+      "originalSha256": "7b247bec236d833d5c986b02acded48e7abbc3c440714c03d3ba22d0e1e62785"
+    },
+    {
+      "path": "app/src/main/java/cn/qingxing/reminder/WifiConnection.java",
+      "publicSha256": "cc10ee8f9199c22db7ff53b0831bf19dce68e15ebad34ebf52f8d77627c56643",
+      "status": "exact-original",
+      "originalSha256": "cc10ee8f9199c22db7ff53b0831bf19dce68e15ebad34ebf52f8d77627c56643"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_app.xml",
+      "publicSha256": "646971add3f5e08058523436c3d1dfc58ae2454dbcfa9d8a68c21d10414b9deb",
+      "status": "exact-original",
+      "originalSha256": "646971add3f5e08058523436c3d1dfc58ae2454dbcfa9d8a68c21d10414b9deb"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_notify.xml",
+      "publicSha256": "b5b62e25f265a81e4db2c0f9632f873126c5b37b0d9c58acba0877dde65a44f0",
+      "status": "exact-original",
+      "originalSha256": "b5b62e25f265a81e4db2c0f9632f873126c5b37b0d9c58acba0877dde65a44f0"
+    },
+    {
+      "path": "app/src/main/res/values/styles.xml",
+      "publicSha256": "386139cfe6f15ead516bd2c601b0693e29c50f90ee53d519cca1f6e8eb852777",
+      "status": "exact-original",
+      "originalSha256": "386139cfe6f15ead516bd2c601b0693e29c50f90ee53d519cca1f6e8eb852777"
+    },
+    {
+      "path": "build.ps1",
+      "publicSha256": "22e210bd29d79e405648b5358a87523534b7ce0f85dfffa65c975292eecf6b35",
+      "status": "exact-original",
+      "originalSha256": "22e210bd29d79e405648b5358a87523534b7ce0f85dfffa65c975292eecf6b35"
+    },
+    {
+      "path": "docs/ANDROID16-image.json",
+      "publicSha256": "ded59d13f3242c63f6d672241203bf4836a7f7c86f6611f1c97d03636817f668",
+      "status": "supplementary"
+    },
+    {
+      "path": "docs/BAIDU-SDK-dependencies.json",
+      "publicSha256": "10d392f6dba13fe27ad9ce1a1566352b8bc2aa4365f22463d28210852ce26bba",
+      "status": "supplementary"
+    },
+    {
+      "path": "docs/BUILD.md",
+      "publicSha256": "d1bf09985c60dae3ed6075ab419409e5006cfd139cbc09c0a6ebbbd36784abe9",
+      "status": "exact-original",
+      "originalSha256": "d1bf09985c60dae3ed6075ab419409e5006cfd139cbc09c0a6ebbbd36784abe9"
+    },
+    {
+      "path": "docs/holiday-cn-LICENSE.txt",
+      "publicSha256": "234e246330285b6589ff2be2381d4ae71fac39b11b1882fd1f6bda6d6f46c4c6",
+      "status": "supplementary"
+    },
+    {
+      "path": "docs/tooling-hashes.txt",
+      "publicSha256": "5479fffc3ede7d1865a60c2ec32c5850853abc6820943451039e0b2564ac9b57",
+      "status": "supplementary"
+    },
+    {
+      "path": "docs/ui-1.1.1-home-hidden.png",
+      "publicSha256": "428721057e07320ea06d2f69b7cf525d8425e748adce6e249cd19f15f92122e1",
+      "status": "supplementary"
+    },
+    {
+      "path": "docs/ui-1.1.1-reopened-hidden.png",
+      "publicSha256": "12d7a38df5721f65245db0c8d54df3e9c955df3c5ed4e806200e7e3ab37aa738",
+      "status": "supplementary"
+    },
+    {
+      "path": "docs/ui-1.1.1-settings-hidden.png",
+      "publicSha256": "aae651832ae3554045c11b53b5b7c8e8cbb7c9070d73ea2649b599e143248759",
+      "status": "supplementary"
+    },
+    {
+      "path": "docs/ui-1.1.1-settings-unlocked.png",
+      "publicSha256": "cb4a8106e665e6ed0edabc11715ea5b6f5fdc5c2e52dd691d062e4faa513c3ae",
+      "status": "supplementary"
+    },
+    {
+      "path": "docs/VERIFICATION-1.1.1.md",
+      "publicSha256": "47443bf058807b3a3d0b103ec2adeec5ceb0f6fe3ac0cdf4409ba671026fd711",
+      "status": "supplementary"
+    },
+    {
+      "path": "README.md",
+      "publicSha256": "58825d30c5c36370935f74632d5b24f8d00636fc45614214367138f1352d107d",
+      "status": "exact-original",
+      "originalSha256": "58825d30c5c36370935f74632d5b24f8d00636fc45614214367138f1352d107d"
+    },
+    {
+      "path": "release/INSTALL.md",
+      "publicSha256": "27b1d8391a520430e35d034559aa5975a93a0889fa90329ee12a6c9227a6bd5d",
+      "status": "supplementary"
+    },
+    {
+      "path": "release/latest.json",
+      "publicSha256": "528854348fc68ef91cb925de6dae06673466719ae2c3e79d850192cb46e0910d",
+      "status": "supplementary"
+    },
+    {
+      "path": "release/version.json",
+      "publicSha256": "399536c9efd81f8b0d9523613fccc134eb6abed393c2fb1cb5e936dc3f360992",
+      "status": "exact-original",
+      "originalSha256": "399536c9efd81f8b0d9523613fccc134eb6abed393c2fb1cb5e936dc3f360992"
+    },
+    {
+      "path": "release-plan.ps1",
+      "publicSha256": "05360c6bcc2b33b07f6e762389188d878f552d8c71ba32c03055d0a1e366de5d",
+      "status": "exact-original",
+      "originalSha256": "05360c6bcc2b33b07f6e762389188d878f552d8c71ba32c03055d0a1e366de5d"
+    },
+    {
+      "path": "release-status.ps1",
+      "publicSha256": "23f833b8e1ea61470c929076c50bd306f7612c1004e4abd6da0378ab3ee0d46b",
+      "status": "exact-original",
+      "originalSha256": "23f833b8e1ea61470c929076c50bd306f7612c1004e4abd6da0378ab3ee0d46b"
+    },
+    {
+      "path": "release.ps1",
+      "publicSha256": "09fd1b6438185b77a29038b3f7d663aa8dde038b90fc2d79435e96a1839217bc",
+      "status": "exact-original",
+      "originalSha256": "09fd1b6438185b77a29038b3f7d663aa8dde038b90fc2d79435e96a1839217bc"
+    },
+    {
+      "path": "scripts/attendance_only_ui.py",
+      "publicSha256": "c052965b22c9cf5e0d24c8b08664dbf459fcad59efa4c56448f44a806adf0255",
+      "status": "exact-original",
+      "originalSha256": "c052965b22c9cf5e0d24c8b08664dbf459fcad59efa4c56448f44a806adf0255"
+    },
+    {
+      "path": "scripts/baidu-sdk-lock.json",
+      "publicSha256": "1403312b41f085f0100e1becfeaf4c8aadabe58bba9201e0e19317c845de8f83",
+      "status": "exact-original",
+      "originalSha256": "1403312b41f085f0100e1becfeaf4c8aadabe58bba9201e0e19317c845de8f83"
+    },
+    {
+      "path": "scripts/build-core.ps1",
+      "publicSha256": "ba058a719367690f7551852f465499c4b7a4f2ddd44ca560aa00197e373078df",
+      "status": "credential-redaction-adapter",
+      "originalSha256": "41abb0cef43daed9f5ed57b647c614b699de0740aafdc681a32015986c17307a"
+    },
+    {
+      "path": "scripts/impact_plan.py",
+      "publicSha256": "c6ac8824106f3f8610ab004c76b936f1f4137fc529c14afbae7082573cb53af7",
+      "status": "exact-original",
+      "originalSha256": "c6ac8824106f3f8610ab004c76b936f1f4137fc529c14afbae7082573cb53af7"
+    },
+    {
+      "path": "scripts/package_baidu.py",
+      "publicSha256": "3848faa36fd54ac27b74d09479b0e8ccef711df1ce0a1767f19b536db7730ab5",
+      "status": "exact-original",
+      "originalSha256": "3848faa36fd54ac27b74d09479b0e8ccef711df1ce0a1767f19b536db7730ab5"
+    },
+    {
+      "path": "scripts/prepare_android16.py",
+      "publicSha256": "42d702bb5602b290b19d6e1a7dfdf483ad62cb98c85f133c1d2ee3f5c8779ea3",
+      "status": "exact-original",
+      "originalSha256": "42d702bb5602b290b19d6e1a7dfdf483ad62cb98c85f133c1d2ee3f5c8779ea3"
+    },
+    {
+      "path": "scripts/prepare_baidu.py",
+      "publicSha256": "bd1a5a1511434d1190cb68c7643fe5965037052ab08486c4d4766408c0ff0b94",
+      "status": "exact-original",
+      "originalSha256": "bd1a5a1511434d1190cb68c7643fe5965037052ab08486c4d4766408c0ff0b94"
+    },
+    {
+      "path": "scripts/release_workflow.py",
+      "publicSha256": "a7176eeb0f6741401cf7bafba03e4975a23618f4dc913771623f55e6099e36d5",
+      "status": "exact-original",
+      "originalSha256": "a7176eeb0f6741401cf7bafba03e4975a23618f4dc913771623f55e6099e36d5"
+    },
+    {
+      "path": "scripts/sdk_build.py",
+      "publicSha256": "e252248b0c56a0df5fdeba2762bf25abbd6e7fd280574b87dc9fde23f82d7462",
+      "status": "exact-original",
+      "originalSha256": "e252248b0c56a0df5fdeba2762bf25abbd6e7fd280574b87dc9fde23f82d7462"
+    },
+    {
+      "path": "scripts/signing.ps1",
+      "publicSha256": "15f0d58bdbc0acb21938ffa2073cdcfe63a38a2eaf4689333b9e6412966b4a20",
+      "status": "supplementary"
+    },
+    {
+      "path": "scripts/test-android-core.ps1",
+      "publicSha256": "7e08caff8b8b48a08aaa5ed7323fc310cd2dae525864eee9466f3a7b1fc596bd",
+      "status": "credential-redaction-adapter",
+      "originalSha256": "a00f6afa447ae2fc2ed313ce4be956a9a1683675cd93e98a309a97fdced3a066"
+    },
+    {
+      "path": "scripts/test-baidu-core.ps1",
+      "publicSha256": "46e9f3e2d506f0e3b6b07ebd532c008b35e6a53e349a2892c11a25775b7450da",
+      "status": "exact-original",
+      "originalSha256": "46e9f3e2d506f0e3b6b07ebd532c008b35e6a53e349a2892c11a25775b7450da"
+    },
+    {
+      "path": "scripts/test-layout-upgrade-core.ps1",
+      "publicSha256": "1067bb306832f3116c13a8b071bcb66e720ec0d5649a8acb0e99fb0986b94baa",
+      "status": "exact-original",
+      "originalSha256": "1067bb306832f3116c13a8b071bcb66e720ec0d5649a8acb0e99fb0986b94baa"
+    },
+    {
+      "path": "scripts/test-smoke-core.ps1",
+      "publicSha256": "501cbaabd6cbc93780e91dfcfa7fe712879e785e768049fafc94396470195119",
+      "status": "exact-original",
+      "originalSha256": "501cbaabd6cbc93780e91dfcfa7fe712879e785e768049fafc94396470195119"
+    },
+    {
+      "path": "scripts/test-upgrade-core.ps1",
+      "publicSha256": "7a1daa16e15ff59b58f8a5ff506fa35771f62ceb5177d15689ecf62ebfbac7ae",
+      "status": "exact-original",
+      "originalSha256": "7a1daa16e15ff59b58f8a5ff506fa35771f62ceb5177d15689ecf62ebfbac7ae"
+    },
+    {
+      "path": "test-android.ps1",
+      "publicSha256": "be62f94f0d4c01bc865416a83ea34c6bc92971a75b9c814c897f3350d59a1ac5",
+      "status": "exact-original",
+      "originalSha256": "be62f94f0d4c01bc865416a83ea34c6bc92971a75b9c814c897f3350d59a1ac5"
+    },
+    {
+      "path": "test-baidu.ps1",
+      "publicSha256": "a3c31cc81645df61a3978852ac4269fb480389666e185185166ef65859a33232",
+      "status": "exact-original",
+      "originalSha256": "a3c31cc81645df61a3978852ac4269fb480389666e185185166ef65859a33232"
+    },
+    {
+      "path": "test-layout-upgrade.ps1",
+      "publicSha256": "942f34d1f99e22e757e3dc1ea3d8ccc1ddb3cd805462165f89190de890eb2222",
+      "status": "exact-original",
+      "originalSha256": "942f34d1f99e22e757e3dc1ea3d8ccc1ddb3cd805462165f89190de890eb2222"
+    },
+    {
+      "path": "test-smoke.ps1",
+      "publicSha256": "bced66e3e61b35190275e42e0785b06d896399a33ee9afa29522d2885e1a6030",
+      "status": "exact-original",
+      "originalSha256": "bced66e3e61b35190275e42e0785b06d896399a33ee9afa29522d2885e1a6030"
+    },
+    {
+      "path": "test-upgrade.ps1",
+      "publicSha256": "106960438d2dfabf9ea7cb3960de9e7bdb549b53f61140888f496367eb966edb",
+      "status": "exact-original",
+      "originalSha256": "106960438d2dfabf9ea7cb3960de9e7bdb549b53f61140888f496367eb966edb"
+    },
+    {
+      "path": "test-workflow.ps1",
+      "publicSha256": "8695a08b1a6f93d1046bbc0d6a7eff50efec7285067730f91e50f180ce5d8e2e",
+      "status": "exact-original",
+      "originalSha256": "8695a08b1a6f93d1046bbc0d6a7eff50efec7285067730f91e50f180ce5d8e2e"
+    },
+    {
+      "path": "tests/AndroidManifest.xml",
+      "publicSha256": "2c4ead2e1e449be85135b96c863a70b58f9631109b99cffca379faa0d8a348ad",
+      "status": "exact-original",
+      "originalSha256": "2c4ead2e1e449be85135b96c863a70b58f9631109b99cffca379faa0d8a348ad"
+    },
+    {
+      "path": "tests/BaiduTests.java",
+      "publicSha256": "7c08dbfcdf97451cb5753310967cc60d5db6c5007c12c6fc2642c2f59d80e0e8",
+      "status": "exact-original",
+      "originalSha256": "7c08dbfcdf97451cb5753310967cc60d5db6c5007c12c6fc2642c2f59d80e0e8"
+    },
+    {
+      "path": "tests/CompactUpgradeProbe.java",
+      "publicSha256": "73793b10c213a9f8cf03957255f107d52f7432238d1737439d46d531d668ce33",
+      "status": "exact-original",
+      "originalSha256": "73793b10c213a9f8cf03957255f107d52f7432238d1737439d46d531d668ce33"
+    },
+    {
+      "path": "tests/fixtures/holiday-2026.json",
+      "publicSha256": "0dcfd8004351e132ce15e8444de4df123265b3f490f7e2f8346631122cb5b709",
+      "status": "exact-original",
+      "originalSha256": "0dcfd8004351e132ce15e8444de4df123265b3f490f7e2f8346631122cb5b709"
+    },
+    {
+      "path": "tests/fixtures/official-2026.txt",
+      "publicSha256": "041b7e6ac4e4d844bb058b3cec0e1b7112d2fc4c5ead3dd4b944739bd5a1b7cd",
+      "status": "supplementary"
+    },
+    {
+      "path": "tests/FlowTests.java",
+      "publicSha256": "a2721f2c75877e7087d8b159f9116b80025c894b3225aa8694142db2ba31e46f",
+      "status": "exact-original",
+      "originalSha256": "a2721f2c75877e7087d8b159f9116b80025c894b3225aa8694142db2ba31e46f"
+    },
+    {
+      "path": "tests/HiddenLocationTests.java",
+      "publicSha256": "44146e68b2f2cb4aaa0c1f29d8db8ac7b18448be6230580da7b9ba7a31795217",
+      "status": "exact-original",
+      "originalSha256": "44146e68b2f2cb4aaa0c1f29d8db8ac7b18448be6230580da7b9ba7a31795217"
+    },
+    {
+      "path": "tests/HolidayParserTest.java",
+      "publicSha256": "3eb076324dbced78f89404bfe70fd959f7eb8e3bff1b79b07b8e9a9dcc62f6cf",
+      "status": "exact-original",
+      "originalSha256": "3eb076324dbced78f89404bfe70fd959f7eb8e3bff1b79b07b8e9a9dcc62f6cf"
+    },
+    {
+      "path": "tests/HolidayTests.java",
+      "publicSha256": "693e9af122c6c3323a7ab52220ae7e768b697e4c9c4ec52f434b4c592acf36b3",
+      "status": "exact-original",
+      "originalSha256": "693e9af122c6c3323a7ab52220ae7e768b697e4c9c4ec52f434b4c592acf36b3"
+    },
+    {
+      "path": "tests/HomeSyncTests.java",
+      "publicSha256": "4a3b922af5c25117f5393992770cf7a27371702086df4e818d140e8ca811e40c",
+      "status": "exact-original",
+      "originalSha256": "4a3b922af5c25117f5393992770cf7a27371702086df4e818d140e8ca811e40c"
+    },
+    {
+      "path": "tests/LayoutUpgradeProbe.java",
+      "publicSha256": "822dda400bf78c2cacd4b3ef816307f68bb4d4f88bd7dafa840ca4b03249bab4",
+      "status": "exact-original",
+      "originalSha256": "822dda400bf78c2cacd4b3ef816307f68bb4d4f88bd7dafa840ca4b03249bab4"
+    },
+    {
+      "path": "tests/LocationTests.java",
+      "publicSha256": "b31693457b700cba3e89412197a5a2c6c2e70ea393808704add2535c1fe55200",
+      "status": "exact-original",
+      "originalSha256": "b31693457b700cba3e89412197a5a2c6c2e70ea393808704add2535c1fe55200"
+    },
+    {
+      "path": "tests/MinimalSmokeTests.java",
+      "publicSha256": "ac6294cfc8e12a6f65d1747d53870afaf99b94ea8dc7ef63901107ebb292a028",
+      "status": "exact-original",
+      "originalSha256": "ac6294cfc8e12a6f65d1747d53870afaf99b94ea8dc7ef63901107ebb292a028"
+    },
+    {
+      "path": "tests/ReminderTests.java",
+      "publicSha256": "acb6fc6de382c6c6960111091e0e0d41db1445449563cdbb094467a5a09ee0de",
+      "status": "exact-original",
+      "originalSha256": "acb6fc6de382c6c6960111091e0e0d41db1445449563cdbb094467a5a09ee0de"
+    },
+    {
+      "path": "tests/RulesTest.java",
+      "publicSha256": "60c5d617861539615c687b874b7718ff3913716b9911f73a6ad9ab1b1a6b8b5f",
+      "status": "exact-original",
+      "originalSha256": "60c5d617861539615c687b874b7718ff3913716b9911f73a6ad9ab1b1a6b8b5f"
+    },
+    {
+      "path": "tests/SmokeTests.java",
+      "publicSha256": "0763d410455de728e7dfcd4cf9e23d5f622ac9b16841342aa298db93297ccafd",
+      "status": "exact-original",
+      "originalSha256": "0763d410455de728e7dfcd4cf9e23d5f622ac9b16841342aa298db93297ccafd"
+    },
+    {
+      "path": "tests/test_impact_plan.py",
+      "publicSha256": "9aa2613173fedf8d075aef6942b37b6adfdde10455f19c9922974c141b4ac5e5",
+      "status": "exact-original",
+      "originalSha256": "9aa2613173fedf8d075aef6942b37b6adfdde10455f19c9922974c141b4ac5e5"
+    },
+    {
+      "path": "tests/test_release_workflow.py",
+      "publicSha256": "44b78fd2adc35067ac049244ceb4939ccd4db92ddd48dc5d3c1dac95bd1282af",
+      "status": "exact-original",
+      "originalSha256": "44b78fd2adc35067ac049244ceb4939ccd4db92ddd48dc5d3c1dac95bd1282af"
+    },
+    {
+      "path": "tests/test_signing.py",
+      "publicSha256": "3eef7b27dacc08728bbacc66bb099ee18ac37ebcbdb79757c0c0db93a8c482e5",
+      "status": "supplementary"
+    },
+    {
+      "path": "tests/UpgradeProbe.java",
+      "publicSha256": "e6c18b8121bdf2189efae53a55284a51b072888e2efe3bdf2edd40933a419ea6",
+      "status": "exact-original",
+      "originalSha256": "e6c18b8121bdf2189efae53a55284a51b072888e2efe3bdf2edd40933a419ea6"
+    }
+  ]
+}
