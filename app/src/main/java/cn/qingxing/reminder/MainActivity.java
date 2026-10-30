@@ -68,13 +68,13 @@ public final class MainActivity extends Activity {
     @Override protected void onPause(){store.prefs.unregisterOnSharedPreferenceChangeListener(statusListener);handler.removeCallbacks(refreshHome);resetVersionTaps();commitWifiOnExit();stashDraft();if(locationPage!=null)locationPage.pause();super.onPause();}
     @Override protected void onDestroy(){handler.removeCallbacksAndMessages(null);if(locationPage!=null)locationPage.close();if(autostartDialog!=null){autostartDialog.setOnCancelListener(null);autostartDialog.dismiss();autostartDialog=null;}super.onDestroy();}
     GradientDrawable bg(int color,int radius){GradientDrawable d=new GradientDrawable();d.setColor(color);d.setCornerRadius(dp(radius));return d;}
-    TextView text(String s,int size,int color,boolean bold){TextView t=new TextView(this);t.setText(s);t.setTextSize(size);t.setTextColor(color);t.setPadding(0,dp(2),0,dp(2));if(bold)t.setTypeface(null,Typeface.BOLD);return t;}
+    TextView text(String s,int size,int color,boolean bold){TextView t=new TextView(this);t.setText(CheckMark.styled(this,s));t.setTextSize(size);t.setTextColor(color);t.setPadding(0,dp(2),0,dp(2));if(bold)t.setTypeface(null,Typeface.BOLD);return t;}
     LinearLayout card(){return card(body);}
     LinearLayout card(LinearLayout parent){LinearLayout l=new LinearLayout(this);l.setOrientation(1);l.setPadding(dp(12),dp(8),dp(12),dp(8));l.setBackground(bg(Color.WHITE,14));LinearLayout.LayoutParams p=new LinearLayout.LayoutParams(-1,-2);p.setMargins(0,0,0,dp(8));parent.addView(l,p);return l;}
     LinearLayout row(LinearLayout parent){LinearLayout r=new LinearLayout(this);r.setGravity(Gravity.CENTER_VERTICAL);parent.addView(r,new LinearLayout.LayoutParams(-1,-2));return r;}
-    Button action(LinearLayout p,String title,Runnable run,boolean primary){Button b=new Button(this);b.setText(title);b.setTextSize(13);b.setAllCaps(false);b.setElevation(0);b.setStateListAnimator(null);b.setMinHeight(0);b.setMinimumHeight(0);b.setMinWidth(0);b.setMinimumWidth(0);b.setPadding(dp(6),0,dp(6),0);b.setTextColor(primary?Color.WHITE:GREEN);b.setBackground(bg(primary?GREEN:0xffe9f1ec,9));LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(p.getOrientation()==LinearLayout.HORIZONTAL?0:-1,dp(44),p.getOrientation()==LinearLayout.HORIZONTAL?1:0);lp.setMargins(0,dp(4),p.getOrientation()==LinearLayout.HORIZONTAL?dp(4):0,0);p.addView(b,lp);b.setOnClickListener(v->run.run());return b;}
+    Button action(LinearLayout p,String title,Runnable run,boolean primary){Button b=new Button(this);b.setText(CheckMark.styled(this,title));b.setTextSize(13);b.setAllCaps(false);b.setElevation(0);b.setStateListAnimator(null);b.setMinHeight(0);b.setMinimumHeight(0);b.setMinWidth(0);b.setMinimumWidth(0);b.setPadding(dp(6),0,dp(6),0);b.setTextColor(primary?Color.WHITE:GREEN);b.setBackground(bg(primary?GREEN:0xffe9f1ec,9));LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(p.getOrientation()==LinearLayout.HORIZONTAL?0:-1,dp(44),p.getOrientation()==LinearLayout.HORIZONTAL?1:0);lp.setMargins(0,dp(4),p.getOrientation()==LinearLayout.HORIZONTAL?dp(4):0,0);p.addView(b,lp);b.setOnClickListener(v->run.run());return b;}
     void button(LinearLayout p,String title,Runnable run,boolean primary){action(p,title,run,primary);}
-    void info(String title,String message){resetVersionTaps();commitWifiOnExit();new AlertDialog.Builder(this).setTitle(title).setMessage(message).setPositiveButton("知道了",null).show();}
+    void info(String title,String message){resetVersionTaps();commitWifiOnExit();new AlertDialog.Builder(this).setTitle(CheckMark.styled(this,title)).setMessage(CheckMark.styled(this,message)).setPositiveButton("知道了",null).show();}
     void heading(LinearLayout c,String title,String sub){LinearLayout r=row(c);TextView t=text(title,16,INK,true);r.addView(t,new LinearLayout.LayoutParams(0,-2,1));if(!sub.isEmpty())help(r,title,sub);}
     void help(LinearLayout r,String title,String message){help(r,title,message,false);}
     void help(LinearLayout r,String title,String message,boolean small){View icon=new View(this){final android.graphics.Paint p=new android.graphics.Paint(3);@Override protected void onDraw(android.graphics.Canvas c){super.onDraw(c);float x=getWidth()/2f,y=getHeight()/2f;p.setColor(GREEN);p.setStyle(android.graphics.Paint.Style.STROKE);p.setStrokeWidth(dp(1));c.drawCircle(x,y,dp(small?7:9),p);p.setStyle(android.graphics.Paint.Style.FILL);p.setTextAlign(android.graphics.Paint.Align.CENTER);p.setTextSize(dp(small?11:13));p.setTypeface(Typeface.DEFAULT_BOLD);android.graphics.Paint.FontMetrics f=p.getFontMetrics();c.drawText("!",x,y-(f.ascent+f.descent)/2,p);}};icon.setContentDescription(title+"说明");r.addView(icon,new LinearLayout.LayoutParams(dp(36),dp(36)));icon.setOnClickListener(v->info(title,message));}
@@ -83,7 +83,7 @@ public final class MainActivity extends Activity {
     String val(String k){return fields.get(k).getText().toString().trim();}
     String current(String k){return fields.containsKey(k)?val(k):draft.getOrDefault(k,store.config().optString(k,""));}
     boolean sameConfig(String... keys){JSONObject cfg=store.config();for(String key:keys)if(!current(key).equals(cfg.optString(key,"")))return false;return true;}
-    void badges(){for(TextView b:configBadges.values()){boolean saved=!store.config().optString("ssid").isEmpty()&&sameConfig("ssid");b.setText(String.valueOf(b.getTag()));android.graphics.drawable.Drawable mark=saved?new SavedMark():null;if(mark!=null)mark.setBounds(0,0,dp(20),dp(20));b.setCompoundDrawables(mark,null,null,null);b.setCompoundDrawablePadding(dp(4));}updateSaveStatus();}
+    void badges(){for(TextView b:configBadges.values()){boolean saved=!store.config().optString("ssid").isEmpty()&&sameConfig("ssid");b.setText(String.valueOf(b.getTag()));android.graphics.drawable.Drawable mark=saved?new CheckMark(b.getCurrentTextColor()):null;if(mark!=null)mark.setBounds(0,0,dp(20),dp(20));b.setCompoundDrawables(mark,null,null,null);b.setCompoundDrawablePadding(dp(4));}updateSaveStatus();}
     void updateSaveStatus(){if(autoSaveStatus==null)return;String msg;boolean error=false;
         if(!sameConfig("amStart","amEnd","pmStart","pmEnd")){msg="未生效：时段无效或冲突，继续使用上次有效时段";error=true;}
         else if(!sameConfig("ssid")&&current("ssid").isEmpty()&&!fields.get("ssid").hasFocus()){msg="未生效：公司 Wi-Fi 名称不能为空，继续使用原配置";error=true;}
@@ -92,11 +92,6 @@ public final class MainActivity extends Activity {
         else if(store.config().optString("ssid").isEmpty())msg="请填写或绑定公司 Wi-Fi";
         else msg="已自动保存";
         autoSaveStatus.setText(msg);autoSaveStatus.setTextColor(error?0xffb42318:MUTED);
-    }
-    final class SavedMark extends android.graphics.drawable.Drawable {
-        final android.graphics.Paint paint=new android.graphics.Paint(3);
-        @Override public void draw(android.graphics.Canvas c){paint.setTextSize(dp(17));paint.setTextAlign(android.graphics.Paint.Align.CENTER);android.graphics.Paint.FontMetrics f=paint.getFontMetrics();c.drawText("✅",getBounds().exactCenterX(),getBounds().exactCenterY()-(f.ascent+f.descent)/2,paint);}
-        @Override public void setAlpha(int alpha){paint.setAlpha(alpha);}@Override public void setColorFilter(android.graphics.ColorFilter filter){paint.setColorFilter(filter);}@Override public int getOpacity(){return android.graphics.PixelFormat.TRANSLUCENT;}
     }
     void watchFields(){for(EditText e:fields.values())e.addTextChangedListener(new android.text.TextWatcher(){public void beforeTextChanged(CharSequence s,int st,int count,int after){}public void onTextChanged(CharSequence s,int st,int before,int count){lastSaveError="";badges();}public void afterTextChanged(android.text.Editable e){}});
         EditText wifi=fields.get("ssid");wifi.setOnFocusChangeListener((v,focus)->{if(!focus&&!rendering)commitWifiOnExit();});wifi.setImeOptions(android.view.inputmethod.EditorInfo.IME_ACTION_DONE);wifi.setOnEditorActionListener((v,action,event)->{if(action==android.view.inputmethod.EditorInfo.IME_ACTION_DONE){commitWifiOnExit();root.requestFocus();((android.view.inputmethod.InputMethodManager)getSystemService(INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(v.getWindowToken(),0);return true;}return false;});badges();}
@@ -161,7 +156,8 @@ public final class MainActivity extends Activity {
     void permissionGuide(){
         commitWifiOnExit();
         String[] labels={(getSystemService(NotificationManager.class).areNotificationsEnabled()?"✅":"❌")+" "+Authorizations.NOTIFICATION_PATH,(WifiConnection.permitted(this,false)?"✅":"❌")+" "+Authorizations.PRECISE_PATH,(WifiConnection.permitted(this,true)?"✅":"❌")+" "+Authorizations.BACKGROUND_PATH,(Planner.exact(this)?"✅":"❌")+" "+Authorizations.ALARM_PATH,(Authorizations.autostart(this)?"✅":"❌")+" "+Authorizations.AUTOSTART_PATH,(notificationAllowed(Alerts.monitorChannel(this))&&notificationAllowed(Alerts.remindChannel(this))?"✅":"❌")+" 监控和打卡通知"};
-        new AlertDialog.Builder(this).setTitle((Authorizations.ready(this)?"✅ ":"❌ ")+Authorizations.ENTRY_LABEL).setItems(labels,(d,w)->{switch(w){case 0:notificationPermission();break;case 1:case 2:appSettings();break;case 3:exactSettings();break;case 4:autostartSettings();break;default:channel(!notificationAllowed(Alerts.monitorChannel(this))?Alerts.monitorChannel(this):Alerts.remindChannel(this));}}).setNegativeButton("关闭",null).show();
+        CharSequence[] marked=new CharSequence[labels.length];for(int i=0;i<labels.length;i++)marked[i]=CheckMark.styled(this,labels[i]);
+        new AlertDialog.Builder(this).setTitle(CheckMark.styled(this,(Authorizations.ready(this)?"✅ ":"❌ ")+Authorizations.ENTRY_LABEL)).setItems(marked,(d,w)->{switch(w){case 0:notificationPermission();break;case 1:case 2:appSettings();break;case 3:exactSettings();break;case 4:autostartSettings();break;default:channel(!notificationAllowed(Alerts.monitorChannel(this))?Alerts.monitorChannel(this):Alerts.remindChannel(this));}}).setNegativeButton("关闭",null).show();
     }
     Intent appSettingsIntent(){return new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,Uri.parse("package:"+getPackageName()));}
     void appSettings(){open(appSettingsIntent());}
@@ -171,7 +167,7 @@ public final class MainActivity extends Activity {
     }
     void showAutostartConfirmation(){
         if(!autostartConfirmationPending||autostartDialog!=null||isFinishing()||isDestroyed())return;
-        autostartDialog=new AlertDialog.Builder(this).setTitle("是否已开启自启动？").setMessage("请确认已在系统应用信息中勾选轻醒的自启动。应用无法自动核验该设置，只有你确认后才显示 ✅。未开启或取消会显示 ❌，必要授权未完成时暂停监控。")
+        autostartDialog=new AlertDialog.Builder(this).setTitle("是否已开启自启动？").setMessage(CheckMark.styled(this,"请确认已在系统应用信息中勾选轻醒的自启动。应用无法自动核验该设置，只有你确认后才显示 ✅。未开启或取消会显示 ❌，必要授权未完成时暂停监控。"))
             .setPositiveButton("已开启",(d,w)->finishAutostartConfirmation(true)).setNegativeButton("取消",(d,w)->finishAutostartConfirmation(false)).setOnCancelListener(d->finishAutostartConfirmation(false)).create();
         autostartDialog.show();
     }

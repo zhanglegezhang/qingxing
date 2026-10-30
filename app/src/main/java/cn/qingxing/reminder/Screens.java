@@ -52,7 +52,7 @@ final class Screens {
             JSONObject day=store.day();
             for(String w:new String[]{"am","pm"}){Button button=a.root.findViewWithTag("attendance_"+w);if(button==null)continue;
                 String label=(day.optBoolean(w+"Done")?"✅ ":"去企微打")+(w.equals("am")?"上班卡":"下班卡")+(day.optBoolean(w+"Done")?"已确认":"");
-                if(!label.contentEquals(button.getText())){button.setText(label);store.debug("界面","按钮已同步",(w.equals("am")?"上班":"下班")+"卡="+(day.optBoolean(w+"Done")?"已确认":"未确认"),false);}
+                if(!label.contentEquals(button.getText())){button.setText(CheckMark.styled(a,label));store.debug("界面","按钮已同步",(w.equals("am")?"上班":"下班")+"卡="+(day.optBoolean(w+"Done")?"已确认":"未确认"),false);}
             }
             LinearLayout pending=a.root.findViewWithTag("pendingHost");if(pending!=null){pending.removeAllViews();pendingItems(pending);}
         }

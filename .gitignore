@@ -21,3 +21,8 @@ docs/*
 !docs/ui-1.1.1-settings-hidden.png
 !docs/ui-1.1.1-settings-unlocked.png
 !docs/ui-1.1.1-reopened-hidden.png
+!docs/VERIFICATION-1.1.2.md
+!docs/ui-1.1.2-home.png
+!docs/ui-1.1.2-authorizations.png
+!docs/ui-1.1.2-binding.png
+!docs/ui-1.1.2-preview.png
